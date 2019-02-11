@@ -1,5 +1,5 @@
 <project default="compile">
-<property name ="src.java.dir" location="./src/main/java/coverter+"/>
+<property name ="src.java.dir" location="./src/main/java/converter+"/>
 <property name="src.test.dir" location="./src/main/test"/>
 <property name="hw2.dir" location="./target"/>
 <property name="hw2.javaclasses.dir" location="${hw2.dir}/classes"/>
