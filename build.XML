@@ -1,20 +1,21 @@
-<project default="compile">
-<property name ="src.java.dir" location="./src/main/java/converter+"/>
-<property name="src.test.dir" location="./src/main/test"/>
-<property name="hw2.dir" location="./target"/>
-<property name="hw2.javaclasses.dir" location="${hw2.dir}/classes"/>
-<property name="hw2.testclasses.dir" location="${hw2.dir}/testclasses"/>
-<property name="hw2.jar.file" location="./MyProduct.jar"/>
-	
-<target name="compile">	
-<mkdir dir="${hw2.javaclasses.dir}"/>
-<javac srcdir="${src.java.dir}" destdir="${hw2.javaclasses.dir}" debug="true" includeantruntime="false">
-</javac>	
-</target>	
-<target name="jar" depends="compile">
-<jar destfile="${hw2.jar.file}">
-	<fileset dir="${hw2.javaclasses.dir}">
-		</fileset>
-	</jar>
-	</target>
+ <project default="compile">
+<property name ="src.java.dir" location="./src/hw2"/>
+<property name ="src.test.dir" location="./src/main/test"/>
+<property name ="result.dir" location="./target"/>
+<property name ="result.javaclasses.dir" location="${result.dir}/classes"/>
+<property name ="result.testclasses.dir" location="${result.dir}/testclasses"/>
+<property name ="result.jar.file" location="./Myproduct.jar"/>
+<target name="compile">
+            <mkdir dir ="${result.javaclasses.dir}"/>
+            <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}" debug="true" includeantruntime="false">
+            </javac>
+</target>
+<!-- comment Make jar or executable product -->
+<target name ="jar" depends ="compile">
+          <jar destfile="${result.jar.file}">
+                   <fileset dir ="${result.jar.file}">
+           </fileset>
+              </jar>
+        </target>
+
 </project>
